@@ -39,7 +39,36 @@ Syscalls also take arguments, meaning, a list of inputs
 
 ![minima theme preview](/img/Sys-write-3.png)
 
+Suppose we want to write "Hello, World!\n" to the screen...
 
+![minima theme preview](/img/Sys-write-4.png)
 
+![minima theme preview](/img/Sys-write-5.png)
+
+# Sys_exit
+
+![minima theme preview](/img/Sys-exit.png)
+
+# Sections
+
+All x86_64 assembly files have three sections, the ".data" section, the ".bss" section, and the ".text" section.
+
+The data section is where all data is defined before compilation.
+
+the bss section is where data is allocated for future use.
+
+the text section is where the actual code goes.
+
+![minima theme preview](/img/helloWorld.png)
+
+# Labels
+
+A "label" is used to label a part of code.
+
+Upon compilation, the compiler will calculate the location in which the label will sit in memory.
+
+Any time the name of the label is used afterwards, that name is replaced by the location in memory by compiler.
+
+![minima theme preview](/img/labels)
 
 
