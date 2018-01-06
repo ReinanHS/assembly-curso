@@ -1,0 +1,48 @@
+section .data
+	digit 	DB 	0,10
+	text 	DB 	"write the number 1: "
+section .bss
+	num1 RESB 16
+section .text
+	global _start
+_start:
+
+CALL PrintText
+CALL getNum1
+CALL _exit
+PrintDigit:
+
+ADD RAX, 48
+MOV [digit], AL
+MOV RAX, 1
+MOV RDI, 1
+MOV RSI, digit
+MOV RDX, 2
+syscall
+ret
+
+PrintText:
+
+MOV RAX, 1
+MOV RDI, 1
+MOV RSI, text
+MOV RDX, length
+syscall
+ret
+
+getNum1:
+
+MOV RAX, 0
+MOV RDI, 0
+MOV RSI, num1
+MOV RDX, 16
+syscall
+ret
+
+
+_exit:
+
+MOV RDI, 0
+MOV RAX, 60
+syscall
+
